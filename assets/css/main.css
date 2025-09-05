@@ -4005,3 +4005,11 @@ input, select, textarea {
   display: block;
   margin: 0 auto;
 }
+.vasovagal {
+		border-radius: 20px;
+}
+.diagnostico {
+	border-radius: 20px;
+	height: 400px;
+	width: 660px;
+}
