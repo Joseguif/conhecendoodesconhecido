@@ -4013,3 +4013,8 @@ input, select, textarea {
 	height: 400px;
 	width: 660px;
 }
+.barre {
+	border-radius: 20px;
+	width: 20cm;
+	height: 10cm;
+}
