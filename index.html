@@ -5,24 +5,42 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="https://code.responsivevoice.org/responsivevoice.js"></script>
-		<script>
-		window.onload = function() {
-    	var texto = document.body.innerText; 
-    	responsiveVoice.speak(texto, "Brazilian Portuguese Female");
-		}
-		</script>
-		
+
+		<!-- ResponsiveVoice -->
+		<script src="https://code.responsivevoice.org/responsivevoice.js?key=YOUR_KEY"></script>
+
+        <!-- Botão de leitura para celular e computador -->
+        <style>
+            #lerPaginaBtn {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: #ff0066;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 30px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                z-index: 9999;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            }
+        </style>
+
 		<script>
 		function lerPagina() {
-    	var texto = document.body.innerText;
-		responsiveVoice.speak(texto, "Brazilian Portuguese Female");
+			var texto = document.body.innerText;
+			responsiveVoice.speak(texto, "Brazilian Portuguese Female");
 		}
 		</script>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body class="landing is-preload">
+
+		<!-- BOTÃO DE LEITURA (funciona em celular + PC) -->
+		<button id="lerPaginaBtn" onclick="lerPagina()">🔊 Ler Página</button>
 
 		<div id="page-wrapper">
 
@@ -31,7 +49,7 @@
 					<a href="index.html">
 						<img src="images/logo.png" alt="Logo do site Conhecendo o Desconhecido" style="height:40px; vertical-align:middle; margin-right:10px;">
 					</a>
-				</h1></a>
+				</h1>
 				<nav id="nav">
 					<ul>
 						<li class="special">
@@ -59,6 +77,7 @@
 				<a href="#one" class="more scrolly">Saiba Quem Somos!</a>
 			</section>
 
+
 			<section id="one" class="wrapper style1 special">
 				<div class="inner">
 					<header class="major">
@@ -70,59 +89,5 @@
 
 			<section id="two" class="wrapper alt style2">
 				<section class="spotlight">
-					<div class="image"><img src="images/jose.jpg" alt="José Guilherme, jovem sorridente de 17 anos, veste camiseta preta e está em ambiente interno iluminado, transmitindo entusiasmo e confiança" /></div>
-					<div class="content">
-						<h2>José Guilherme</h2>
-						<p>Tenho 17 anos, sou apaixonado por tecnologia e pretendo seguir na área de programação fullstack. Este projeto me aproxima do desenvolvimento de soluções digitais com impacto social.</p>
-					</div>
-				</section>
-				<section class="spotlight">
-					<div class="image"><img src="images/julia.jpg" alt="Julia Florentino" /></div>
-					<div class="content">
-						<h2>Julia Florentino</h2>
-						<p>Tenho 17 anos e quero cursar Enfermagem. Acredito que a informação é essencial para o cuidado e a prevenção de doenças.</p>
-					</div>
-				</section>
-				<section class="spotlight">
-					<div class="image"><img src="images/lorrainy.jpg" alt="Lorrainy Figueiredo" /></div>
-					<div class="content">
-						<h2>Lorrainy Figueiredo</h2>
-						<p>Tenho 16 anos e sonho em ser médica. Com este projeto, busco me aproximar do universo da medicina e ajudar a divulgar informações importantes para a população.</p>
-					</div>
-				</section>
-			</section>
-
-			<!-- ...existing code... -->
-<footer id="footer">
-    <ul class="icons">
-        <li>
-            <a href="https://instagram.com/" target="_blank" rel="noopener" class="icon brands fa-instagram" aria-label="Instagram">
-                <span class="label">Instagram</span>
-            </a>
-        </li>
-        <li>
-            <a href="mailto:seuemail@exemplo.com" class="icon solid fa-envelope" aria-label="Email">
-                <span class="label">Email</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="copyright">
-        <li>Projeto Educacional - Senac</li>
-        <li>Desenvolvido por José Guilherme, Julia Florentino e Lorrainy Figueiredo</li>
-    </ul>
-</footer>
-<!-- ...existing code... -->
-
-		</div>
-
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
-	</body>
-
-</html>
+					<div class="image"><img src="images/jose.jpg" alt="José Guilherme" /></div>
+					<div class="content"
