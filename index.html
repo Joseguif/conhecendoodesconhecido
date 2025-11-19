@@ -5,6 +5,21 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+		<script>
+		window.onload = function() {
+    	var texto = document.body.innerText; 
+    	responsiveVoice.speak(texto, "Brazilian Portuguese Female");
+		}
+		</script>
+		
+		<script>
+		function lerPagina() {
+    	var texto = document.body.innerText;
+		responsiveVoice.speak(texto, "Brazilian Portuguese Female");
+		}
+		</script>
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="landing is-preload">
