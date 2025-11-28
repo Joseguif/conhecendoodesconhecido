@@ -5,20 +5,26 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="https://code.responsivevoice.org/responsivevoice.js"></script>
-		<script>
-		window.onload = function() {
-    	var texto = document.body.innerText; 
-    	responsiveVoice.speak(texto, "Brazilian Portuguese Female");
-		}
-		</script>
-		
-		<script>
-		function lerPagina() {
-    	var texto = document.body.innerText;
-		responsiveVoice.speak(texto, "Brazilian Portuguese Female");
-		}
-		</script>
+	<div id="caixa-permissao" 
+     style="position:fixed; bottom:20px; right:20px; padding:20px; 
+            background:#ffffff; border:1px solid #ccc; width:250px; 
+            box-shadow:0 0 10px rgba(0,0,0,0.2);">
+
+    <!-- MENSAGEM EM CIMA -->
+    <p><b>Gostaria de ativar a leitura automática da página?</b></p>
+
+    <!-- BOTÕES TRADUZIDOS -->
+    <button onclick="permitirLeitura()" 
+            style="padding:8px 12px; margin-right:10px; background:#4CAF50; color:#fff; border:none;">
+        Permitir
+    </button>
+
+    <button onclick="recusarLeitura()" 
+            style="padding:8px 12px; background:#f44336; color:#fff; border:none;">
+        Recusar
+    </button>
+</div>
+
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
