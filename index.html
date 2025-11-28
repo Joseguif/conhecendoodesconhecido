@@ -24,6 +24,17 @@
         Recusar
     </button>
 </div>
+<script>
+function permitirLeitura() {
+    var texto = document.body.innerText;
+    responsiveVoice.speak(texto, "Brazilian Portuguese Female");
+    document.getElementById("caixa-permissao").style.display = "none";
+}
+
+function recusarLeitura() {
+    document.getElementById("caixa-permissao").style.display = "none";
+}
+</script>
 
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
