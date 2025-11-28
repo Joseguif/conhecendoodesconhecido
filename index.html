@@ -34,7 +34,7 @@
     <script>
     function permitirLeitura() {
         var texto = document.body.innerText;
-        responsiveVoice.speak(texto, "Brazilian Portuguese Female");
+        responsiveVoice.speak(texto, "Brazilian Portuguese Female"){ rate: 1.5 }; 
         document.getElementById("caixa-permissao").style.display = "none";
     }
 
