@@ -12,13 +12,13 @@
 
 <body class="landing is-preload">
 
-    <!-- 🔊 CAIXA DE PERMISSÃO (agora no lugar certo) -->
+    <!-- 🔊 CAIXA DE PERMISSÃO (FUNCIONA EM PC E CELULAR) -->
     <div id="caixa-permissao" 
         style="position:fixed; bottom:20px; right:20px; padding:20px; 
-        background:#ffffff; border:1px solid #ccc; width:270px; 
+        background:#ffffff; border:1px solid #ccc; width:280px; 
         box-shadow:0 0 10px rgba(0,0,0,0.2); z-index:9999;">
 
-        <p><b>Gostaria de ativar a leitura automática da página?</b></p>
+        <p><b>Deseja permitir a leitura automática do site?</b></p>
 
         <button onclick="permitirLeitura()" 
             style="padding:8px 12px; margin-right:10px; background:#4CAF50; color:#fff; border:none;">
@@ -34,7 +34,21 @@
     <script>
     function permitirLeitura() {
         var texto = document.body.innerText;
-        responsiveVoice.speak(texto, "Brazilian Portuguese Female"){ rate: 1.5 }; 
+
+        // 🔊 Correção: sintaxe correta + velocidade + compatível com celular
+        responsiveVoice.speak(
+            texto,
+            "Brazilian Portuguese Female",
+            {
+                rate: 1.5,          // velocidade
+                pitch: 1,           // tom normal
+                volume: 1,          // volume
+                onstart: function() {
+                    console.log("Leitura iniciada.");
+                }
+            }
+        );
+
         document.getElementById("caixa-permissao").style.display = "none";
     }
 
